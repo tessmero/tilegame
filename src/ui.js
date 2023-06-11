@@ -13,7 +13,7 @@ var menuUiRect = [
 ]
 
 function playButton(){
-    //clearMap()
+    clearMap()
     cameraX = 0;
     cameraY = 0;
     zoomLevel = 1;
