@@ -1,2 +1,0 @@
-function getUnitVector(dx,dy){
-}

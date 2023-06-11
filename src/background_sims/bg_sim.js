@@ -6,16 +6,8 @@ class BackgroundSimulation {
     this.simtime = 0;
   }
   
-  isSolid(){
-    return true;
-  }
-  
   toString(){
       return this.constructor.name;
-  }
-  
-  getBaseExportCharacter(){
-    throw new Error('not implemented');
   }
   
   update(time_elapsed){
