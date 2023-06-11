@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>  
-    <title>Tile-based Game</title>
+    <title>Sim Engine</title>
     <style>
       canvas {
         border: 1px solid black;
@@ -10,11 +10,29 @@
   </head>
   <body style="text-align:center">
     <canvas id="gameCanvas" width="800" height="600"></canvas>
-  
-    <textarea id="gameTextArea" onclick="this.select()" rows="4" cols="50"></textarea>
+    <br>
+    <textarea id="gameTextArea" onclick="this.select()" rows="4" cols="50">Import/export map strings here</textarea>
+    <br>
+    <p>
+        Controls:
+        <br>
+        escape: toggle menu
+        <br>
+        WASD: pan camera
+        <br>
+        scroll eheel: zoom camera
+        <br>
+        1-0: select toolbar slots
+        <br>
+        R: rotate block before placing
+        <br>
+        left-click: place block
+        <br>
+        right-click: remove block
+    </p>
+    
   
       <script src="lib/lz-string.js"></script>
-      
       <script src="src/core/math.js"></script>
       <script src="src/core/direction.js"></script>
       <script src="src/core/game_state.js"></script>
