@@ -17,15 +17,19 @@ function init() {
     canvas.addEventListener("click", leftClick);
     canvas.addEventListener('contextmenu', rightClick);
 
+    // init start menu background simulation
+    resetStartMenuSim()
+    
     // Start the game loop
     requestAnimationFrame(gameLoop);
-    }
+}
 
-    // Main game loop
-    let secondsPassed;
-    let oldTimeStamp;
-    let fps;
-    function gameLoop(timeStamp) {
+// Main game loop
+let secondsPassed;
+let oldTimeStamp;
+let fps;
+
+function gameLoop(timeStamp) {
     var msPassed = 0;
     if (oldTimeStamp) {
       msPassed = timeStamp - oldTimeStamp;

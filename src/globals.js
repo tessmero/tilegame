@@ -5,6 +5,7 @@ var ctx;
 
 // src/core/game_state.js
 var gameState = GameState.StartMenu;
+var startMenuSim = null;
 
 // gameplay settings
 var baseShooterCooldown = 2000;

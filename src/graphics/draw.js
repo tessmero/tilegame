@@ -79,6 +79,8 @@ function draw(fps) {
     ctx.fillText("FPS: " + fps, x, y);
     
     //y += 30
+    //ctx.fillText(`camera: ${cameraX.toFixed(2)}, ${cameraY.toFixed(2)}, ${zoomLevel.toFixed(2)}`, x, y);
+    //y += 30
     //ctx.fillText(gameState, x, y);
     //y += 30 
     //ctx.fillText(`canvas pos: ${canvasMouseX}, ${canvasMouseY}`, x, y);

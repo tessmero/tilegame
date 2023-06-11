@@ -33,6 +33,9 @@ function mouseMove(event) {
 }
 
 function mouseWheel(event){
+    if( gameState != GameState.Playing ){
+        return
+    }
     
     var oldZoomLevel = zoomLevel;
     
@@ -43,7 +46,7 @@ function mouseWheel(event){
     // keep virtual mouse position consistent
     cameraX += canvasMouseX * (1 / (tileSize * oldZoomLevel) - 1 / (tileSize * zoomLevel))
     cameraY += canvasMouseY * (1 / (tileSize * oldZoomLevel) - 1 / (tileSize * zoomLevel))
-
+    
     event.preventDefault();
 }
 

@@ -1,0 +1,12 @@
+// shooter spiral
+
+var bg_sim_2 = new BackgroundSimulation(
+    
+    [
+        //[time,x,y,z]
+        [0,33,27,2],
+        [10000,22,19,.7],
+        [20000,22,19,.7],
+    ],
+    "NrBEoGnLOvYTJ9mJetnXYzruD8i8TDTizKLrzaryBdCMG+t1juz9r3n/7oL5CBjZqIkipwmZNnS5ihcrEt56pRpWad2vVoMCma3Yf2mL5q2ZuWYxu4+tPbzt648YH7l75//PAL88b0Cw4IigqPD/UMiYhPik6OTVVPSUzMSsyLic/OzCjKLY8QLiivKqkq48msr66obmhDqWxo72rqi2pr7O/u7A3oHRofHB5RGJscnZ+clpuZmV5cmlhbXN7dXUDd2DrcOY/aOznfOM04ub47vSk0un2+fk6/uXz4+ld9e/r/+RjKAJB30BVl+oPBUJhVEhYNh0LB8JSAGUABYAe0xABcAKYAJwgACUAJYAc3ROMuGOx+KJAFUAA5I1muFH1Wm4wkkilU5Zc+kQZlshGWDnpQU8smU6ljKWMlmI5W5YF3BW82U5DUilWih5ijUy/mJHVKsX6k5qpFGvlyixmy0W7ISgVY7lE432hSOvV+q7W/2wW1a2S+50RzKur4hk2UcNOxMuwOR5Cx71p91C3Wp3NRlNJuDpnwJoNl9jRvPlwsGms4DUAEUxAHcAHZoDUAGTxADMM1WB25KzSszym22KF3e/264OzMPbo2W+2+FO+7ON/OC/6lxONGuZ9Wj7oF81dyudAfN3OgY8VeeS6Oid318fr4JT9qnxBxxegle30A29vgfToAJvd89m3cZQLPb8X0PCCgNAT9wlgt06R5BDIIg1CHW/X9XnAnDEzwkjkIorxoPIpDaKkMjKJo98GLoxi2PAFimPYmtOO4vjB141ihJ46j+K44SQlEiTpPE1opNksTFI4+SlIU4TBLUzSAQ01TdPuHSZL0v4DK0wzVhMozLImCyzNMtYbLsqy+gcpzXMqFzbLc5yVM83yNw8xy/IGAKvNC1U7yCyLmJ8wLYr1EKorCnoYqS1LDgSuLEr8DK0syiEUqyvKoRywrcvZAqitK8yKrKqr7JquravWBrKtazYSraxrFhapreoDCLOsG7Seq6ob+tGvrwQ6yaZsIaaJoWjh5rGlbJIG2bVpaZaNp25T1sW3bvP2zaTuCkbToOpxtsui6UIYIA="
+)

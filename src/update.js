@@ -5,7 +5,12 @@ function update(elapsedTime) {
     
     updateMousePos()
 
-    if( gameState==GameState.Playing ){
+    if( gameState == GameState.StartMenu ){
+
+        // automatic camera movement
+        startMenuSim.update(elapsedTime)
+
+    } else if( gameState==GameState.Playing ){
 
         // Camera panning with WASD keys
         if (keys[87]) cameraY -= cameraSpeed * elapsedTime; // W key (up)
@@ -13,7 +18,10 @@ function update(elapsedTime) {
         if (keys[65]) cameraX -= cameraSpeed * elapsedTime; // A key (left)
         if (keys[68]) cameraX += cameraSpeed * elapsedTime; // D key (right)
 
-        // Update other game logic here
+    }
+    
+    if( gameState != GameState.Paused ){
+        // Update simulation
         for (var x = 0; x < mapWidth; x++) {
             for (var y = 0; y < mapHeight; y++) {
                 var tileObject = tileMap[x][y];

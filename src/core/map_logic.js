@@ -26,6 +26,14 @@ function attemptPlaceBlock(x,y,dir,block){
 
 }
 
+function clearMap(){
+    for( var x = 0 ; x < mapWidth ; x++ ){
+        for( var y = 0 ; y < mapHeight ; y++ ){
+            tileMap[x][y] = null
+        }
+    }
+}
+
 // destroy a single block
 // called in src/mouse.js : rightClick
 // called in src/blocks/wall.js : hitByLaser

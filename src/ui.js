@@ -13,10 +13,19 @@ var menuUiRect = [
 ]
 
 function playButton(){
+    //clearMap()
+    cameraX = 0;
+    cameraY = 0;
+    zoomLevel = 1;
+    gameState = GameState.Playing
+}
+
+function continueButton(){
     gameState = GameState.Playing
 }
 
 function quitButton(){
+    resetStartMenuSim()
     gameState = GameState.StartMenu
 }
 
@@ -43,7 +52,7 @@ var startMenuButtons = [
 var pauseMenuButtons = [
     {
         rect:[300,250,200,25],
-        action:playButton,
+        action:continueButton,
         label: "Continue",
         hovered: false,
     },
