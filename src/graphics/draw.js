@@ -78,8 +78,8 @@ function draw(fps) {
     var y = 30
     ctx.fillText("FPS: " + fps, x, y);
     
-    y += 30
-    ctx.fillText(gameState, x, y);
+    //y += 30
+    //ctx.fillText(gameState, x, y);
     //y += 30 
     //ctx.fillText(`canvas pos: ${canvasMouseX}, ${canvasMouseY}`, x, y);
     //y += 30

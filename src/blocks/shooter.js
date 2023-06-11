@@ -44,7 +44,7 @@ class Shooter extends DirectedBlock {
     }
     
     justPlaced() {
-        this.cooldown = baseShooterCooldown;
+        this.cooldown = Math.random() * baseShooterCooldown;
         var td = getTargetAndDistance(this.x,this.y,this.dir);
         this.target = td[0];
         this.targetDistance = td[1];

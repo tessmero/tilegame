@@ -5,7 +5,7 @@ function drawMenu(){
     drawMenuRect(menuUiRect)
     
     // draw buttons
-    var buttonSet = (gameState == GameState.StartMenu ? startMenuButtons : pauseMenuButtons )
+    var buttonSet = getCurrentMenuButtonSet();
     for( var i = 0 ; i < buttonSet.length ; i++ ){
         drawMenuButton(buttonSet[i])
     }

@@ -16,3 +16,9 @@ class Direction {
 }
 
 var allDirections = [Direction.Up,Direction.Right,Direction.Down,Direction.Left];
+
+var directionsByName = {}
+for( var i = 0 ; i < allDirections.length ; i++ ){
+    var dir = allDirections[i];
+    directionsByName[dir.name] = dir;
+}

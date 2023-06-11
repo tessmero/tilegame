@@ -11,9 +11,14 @@
   <body style="text-align:center">
     <canvas id="gameCanvas" width="800" height="600"></canvas>
   
+    <textarea id="gameTextArea" onclick="this.select()" rows="4" cols="50"></textarea>
+  
+      <script src="lib/lz-string.js"></script>
+      
       <script src="src/core/direction.js"></script>
       <script src="src/core/game_state.js"></script>
       <script src="src/core/map_logic.js"></script>
+      <script src="src/core/map_io.js"></script>
       <script src="src/blocks/block.js"></script>
       <script src="src/blocks/directed_block.js"></script>
       <script src="src/blocks/shooter.js"></script>

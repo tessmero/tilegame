@@ -9,6 +9,14 @@ class Block {
     return true;
   }
   
+  toString(){
+      return this.constructor.name;
+  }
+  
+  getBaseExportCharacter(){
+    throw new Error('not implemented');
+  }
+  
   drawChildren(){}
   
   justPlaced(){}

@@ -20,6 +20,16 @@ function quitButton(){
     gameState = GameState.StartMenu
 }
 
+function importButton(){
+    var ta = document.getElementById("gameTextArea");
+    importTilemapFromString( ta.value );
+}
+
+function exportButton(){
+    var ta = document.getElementById("gameTextArea");
+    ta.value = exportTilemapToString();
+}
+
 var menuClickAction = null;
 var startMenuButtons = [
     {
@@ -39,6 +49,18 @@ var pauseMenuButtons = [
     },
     {
         rect:[300,300,200,25],
+        action:importButton,
+        label: "Import Map",
+        hovered: false,
+    },
+    {
+        rect:[300,325,200,25],
+        action:exportButton,
+        label: "Export Map",
+        hovered: false,
+    },
+    {
+        rect:[300,350,200,25],
         action:quitButton,
         label: "Quit",
         hovered: false,
@@ -108,15 +130,15 @@ function uiClicked(){
     
     if( (gameState == GameState.Playing) && toolbarHovered ){
         selectedToolbarSlotIndex = hoveredToolbarSlotIndex;
-        console.log('clicked consumed by toolbar ui')
+        //console.log('clicked consumed by toolbar ui')
         return true
         
     } else if ( (gameState != GameState.Playing) && menuClickAction){
         menuClickAction()
-        console.log('click consumed by menu ui')
+        //console.log('click consumed by menu ui')
         return true
     }
     
-    console.log('clicked passed through ui')
+    //console.log('clicked passed through ui')
     return false
 }
