@@ -56,7 +56,9 @@ function leftClick(event){
     }
     
     // place block
-    else if( selectedToolbarSlotIndex < toolbarBlocks.length ){
+    else if( (gameState == GameState.Playing) 
+            && (selectedToolbarSlotIndex < toolbarBlocks.length) ){
+            
         attemptPlaceBlock(
             mouseTileX,mouseTileY,
             allDirections[selectedDirectionIndex],

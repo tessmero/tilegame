@@ -1,7 +1,10 @@
 
-// html canvas context
+// graphics context
 var canvas;
 var ctx;
+
+// src/core/game_state.js
+var gameState = GameState.StartMenu;
 
 // gameplay settings
 var baseShooterCooldown = 2000;

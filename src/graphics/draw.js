@@ -30,41 +30,58 @@ function draw(fps) {
         }
     }
 
-    // highlight hovered tile
-    if( !toolbarHovered ){
-        if (isTileOnMap(mouseTileX,mouseTileY)) {
-            ctx.lineWidth = 3;
-            ctx.strokeStyle = "black";
-            ctx.strokeRect(mouseTileX * tileSize, mouseTileY * tileSize, tileSize, tileSize);
+    if( gameState == GameState.Playing ){
+        if( !toolbarHovered ){
+            if (isTileOnMap(mouseTileX,mouseTileY)) {
+                
+                // highlight hovered tile
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = "black";
+                ctx.strokeRect(mouseTileX * tileSize, mouseTileY * tileSize, tileSize, tileSize);
 
-            // draw extra overlays about the hovered block
-            if( hoveredBlock ){
+                // draw extra overlays about the hovered block
+                if( hoveredBlock ){
+                    
+                }
                 
-            }
-            
-            // draw block blueprint if player has a block selected
-            else if( selectedToolbarSlotIndex < toolbarBlocks.length ){
-                block = toolbarBlocks[selectedToolbarSlotIndex];
-                
-                ctx.globalAlpha = 0.5;
-                block.draw(
-                    mouseTileX * tileSize, 
-                    mouseTileY * tileSize, 
-                    tileSize, tileSize)
-                ctx.globalAlpha = 1;
-            }
-        } 
+                // draw block blueprint if player has a block selected
+                else if( selectedToolbarSlotIndex < toolbarBlocks.length ){
+                    block = toolbarBlocks[selectedToolbarSlotIndex];
+                    
+                    ctx.globalAlpha = 0.5;
+                    block.draw(
+                        mouseTileX * tileSize, 
+                        mouseTileY * tileSize, 
+                        tileSize, tileSize)
+                    ctx.globalAlpha = 1;
+                }
+            } 
+        }
     }
 
     // Reset the transformation
     ctx.setTransform(1, 0, 0, 1, 0, 0);
 
-    drawToolbar();
+    // draw hud/menu
+    if( gameState != GameState.StartMenu ){
+        drawToolbar();
+    } 
+    if( gameState != GameState.Playing ){
+        drawMenu();
+    }
 
     // Draw FPS on the screen
     ctx.font = "25px Arial";
+    ctx.textAlign = "left";
     ctx.fillStyle = "black";
-    ctx.fillText("FPS: " + fps, 10, 30);
-    //ctx.fillText("canvas pos: " + canvasMouseX + ", " + canvasMouseY, 10, 60);
-    //ctx.fillText("virtual pos: " + virtualMouseX + ", " + virtualMouseY, 10, 90);
+    var x = 10
+    var y = 30
+    ctx.fillText("FPS: " + fps, x, y);
+    
+    y += 30
+    ctx.fillText(gameState, x, y);
+    //y += 30 
+    //ctx.fillText(`canvas pos: ${canvasMouseX}, ${canvasMouseY}`, x, y);
+    //y += 30
+    //ctx.fillText(`virtual pos: ${virtualMouseX}, ${virtualMouseY}`, x, y);
 }
