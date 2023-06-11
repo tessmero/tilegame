@@ -71,11 +71,11 @@ function leftClick(event){
 }
 
 function rightClick(event){
-    updateMousePos(event)
     
-    attemptDeleteBlock(
-        mouseTileX,mouseTileY
-    )
+    if( gameState == GameState.Playing ){
+        updateMousePos(event)
+        attemptDeleteBlock(mouseTileX,mouseTileY)
+    }
         
     event.preventDefault();
 }
